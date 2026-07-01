@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mosheb.github.io',
+  site: 'https://mosheblumbergx.github.io',
+  base: '/mosheb.github.io',
   integrations: [mdx()],
 });
