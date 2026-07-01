@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <h1>Hi, I'm Moshe Blumberg</h1>
+    <p class="subtitle">Software Engineer & Developer</p>
+    <p class="intro">
+      I build software and explore interesting technical challenges.
+      This is where I share my projects and ideas.
+    </p>
+  </section>
+
+  <section class="recent-projects">
+    <h2>Recent Projects</h2>
+    <div class="projects-grid">
+      {projects.map(project => <ProjectCard project={project} />)}
+    </div>
+    <a href="/projects" class="view-all">View all projects →</a>
+  </section>
+</BaseLayout>

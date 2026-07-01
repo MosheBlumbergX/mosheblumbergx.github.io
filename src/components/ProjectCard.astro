@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, tags, status } = project.data;
+---
+
+<article class="project-card">
+  <h3>
+    <a href={`/projects/${project.id.replace(/\.mdx?$/, '')}`}>{title}</a>
+  </h3>
+  <p>{description}</p>
+  <div class="card-footer">
+    {tags.length > 0 && (
+      <div class="tags">
+        {tags.slice(0, 3).map(tag => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+    <span class={`status status-${status}`}>{status}</span>
+  </div>
+</article>
