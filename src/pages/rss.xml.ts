@@ -7,7 +7,7 @@ export async function GET(context: APIContext) {
   return rss({
     title: 'Moshe Blumberg - Projects',
     description: 'Software projects and experiments',
-    site: context.site || 'https://mosheb.github.io',
+    site: context.site || 'https://mosheblumbergx.github.io',
     items: projects.map(project => ({
       title: project.data.title,
       description: project.data.description,

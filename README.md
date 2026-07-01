@@ -76,7 +76,7 @@ The site automatically deploys to GitHub Pages when you push to the main branch.
 3. Set Source to "GitHub Actions"
 4. Push to main branch to trigger deployment
 
-Your site will be available at: `https://mosheb.github.io`
+Your site will be available at: `https://mosheblumbergx.github.io`
 
 ## 📄 License
 
