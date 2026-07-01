@@ -149,4 +149,5 @@ export default defineConfig({
 4. Customize colors in `src/styles/global.css`
 5. Add your own favicon in `public/favicon.svg`
 
+
 Enjoy your new portfolio site! 🚀
