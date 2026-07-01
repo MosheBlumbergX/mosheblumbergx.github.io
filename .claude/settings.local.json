@@ -11,7 +11,10 @@
       "Bash(npm run *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(astro dev *)"
+      "Bash(astro dev *)",
+      "Bash(curl -s https://mosheblumbergx.github.io/)",
+      "Bash(curl -I https://mosheblumbergx.github.io/_astro/BaseLayout.DMgAB7Ak.css)",
+      "Bash(curl -s http://localhost:4321/about)"
     ]
   }
 }

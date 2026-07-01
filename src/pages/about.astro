@@ -1,30 +1,170 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Page configuration and content
+const pageTitle = "About Me";
+
+const snapshot = {
+  location: "United Kingdom (Kintbury)",
+  expertise: "Event-Driven Architecture, Apache Kafka & Confluent Ecosystem, Kubernetes, and Data Pipeline Automation",
+  philosophy: "Pragmatic code, sustainable systems, and continuous hands-on learning",
+  fuel: "Long-distance trail runs, plant-based cooking, and hands-on DIY engineering"
+};
 ---
 
-<BaseLayout title="About - Moshe Blumberg" description="About Moshe Blumberg">
-  <section class="about">
-    <h1>About Me</h1>
-    <div class="about-content">
-      <p>
-        I'm a software engineer passionate about building quality software and solving complex problems.
+<BaseLayout title={pageTitle}>
+  <main class="about-container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="gradient-text">Hi, I'm Moshe.</h1>
+      <p class="hook-text">
+        I’m a Solution Architect, builder, and problem solver who thrives at the intersection of complex logic and clean data experiences. Whether I'm designing scalable, cloud-native Apache Kafka architectures or fine-tuning my home automation and local energy systems, my ultimate goal is always the same: maximum efficiency, minimal friction, and robust execution.
       </p>
-      <p>
-        This site is a collection of my projects, experiments, and technical explorations.
-        I use it to document what I'm learning and share what I build.
-      </p>
-      <h2>Technologies I Work With</h2>
-      <ul>
-        <li>TypeScript / JavaScript</li>
-        <li>Python</li>
-        <li>React / Next.js</li>
-        <li>Node.js</li>
-        <li>And more...</li>
-      </ul>
-      <h2>Get in Touch</h2>
-      <p>
-        You can find me on <a href="https://github.com/MosheBlumbergX" target="_blank" rel="noopener">GitHub</a>.
-      </p>
-    </div>
-  </section>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Narrative & Snapshot Grid -->
+    <section class="content-grid">
+      <div class="bio-text">
+        <h2>What I Do</h2>
+        <p>
+          With over two decades of professional experience in technology, including more than 7 years specializing in Kafka and the Confluent platform, I act as a trusted advisor to strategic enterprises. 
+        </p>
+        <p>
+          I bridge the gap between high-level business goals and deeply technical infrastructure, solving complex real-time data streaming problems across distributed systems, cloud environments, and automated pipelines.
+        </p>
+      </div>
+
+      <!-- Quick Snapshot Sidebar -->
+      <div class="snapshot-card">
+        <h3>Quick Snapshot</h3>
+        <ul class="snapshot-list">
+          <li><strong>Location:</strong> {snapshot.location}</li>
+          <li><strong>Expertise:</strong> {snapshot.expertise}</li>
+          <li><strong>Philosophy:</strong> {snapshot.philosophy}</li>
+          <li><strong>Fuel:</strong> {snapshot.fuel}</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
 </BaseLayout>
+
+<style>
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #f5f5f5;
+    line-height: 1.6;
+  }
+
+  .hero {
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #4f46e5, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hook-text {
+    font-size: 1.35rem;
+    color: #b0b0b0;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 3rem 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .bio-text h2 {
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+  }
+
+  .bio-text p {
+    font-size: 1.05rem;
+    color: #b0b0b0;
+    margin-bottom: 1.25rem;
+  }
+
+  .snapshot-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .snapshot-card h3 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    color: #f5f5f5;
+  }
+
+  .snapshot-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .snapshot-list li {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    line-height: 1.5;
+  }
+
+  .snapshot-list strong {
+    color: #f5f5f5;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    h1 {
+      font-size: 2.25rem;
+    }
+    
+    .hook-text {
+      font-size: 1.2rem;
+    }
+  }
+</style>
