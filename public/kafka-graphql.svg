@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <!-- header -->
+  <text x="60" y="96" fill="#e7e9ee" font-size="52" font-weight="700">Kafka <tspan fill="#6ea8fe">×</tspan> GraphQL</text>
+  <text x="62" y="140" fill="#9aa3b2" font-size="24">Live order tracking — Confluent Cloud + GraphQL subscriptions</text>
+  <circle cx="68" cy="182" r="6" fill="#4ade80"/>
+  <text x="84" y="188" fill="#4ade80" font-size="16" font-weight="600">subscription live</text>
+  <text x="214" y="188" fill="#9aa3b2" font-size="16">· mutation writes to Kafka, subscription streams status back</text>
+
+  <!-- ============ CARD 1 — PREPARING ============ -->
+  <g transform="translate(60,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">Keyboard<tspan fill="#9aa3b2" font-size="15" font-weight="400"> ×2</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">Ada</text>
+    <rect x="204" y="30" width="112" height="26" rx="13" fill="#f5b942"/>
+    <text x="260" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">PREPARING</text>
+    <!-- progress: 2 of 4 -->
+    <rect x="24"  y="128" width="69" height="8" rx="4" fill="#f5b942"/>
+    <rect x="101" y="128" width="69" height="8" rx="4" fill="#f5b942"/>
+    <rect x="178" y="128" width="69" height="8" rx="4" fill="#1e222b"/>
+    <rect x="255" y="128" width="61" height="8" rx="4" fill="#1e222b"/>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">a1b2c3d4 · 10:42:07</text>
+  </g>
+
+  <!-- ============ CARD 2 — SHIPPED ============ -->
+  <g transform="translate(430,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">Monitor<tspan fill="#9aa3b2" font-size="15" font-weight="400"> ×1</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">Grace</text>
+    <rect x="222" y="30" width="94" height="26" rx="13" fill="#6ea8fe"/>
+    <text x="269" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">SHIPPED</text>
+    <!-- progress: 3 of 4 -->
+    <rect x="24"  y="128" width="69" height="8" rx="4" fill="#6ea8fe"/>
+    <rect x="101" y="128" width="69" height="8" rx="4" fill="#6ea8fe"/>
+    <rect x="178" y="128" width="69" height="8" rx="4" fill="#6ea8fe"/>
+    <rect x="255" y="128" width="61" height="8" rx="4" fill="#1e222b"/>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">7f3e9a10 · 10:41:55</text>
+  </g>
+
+  <!-- ============ CARD 3 — DELIVERED ============ -->
+  <g transform="translate(800,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">Mouse<tspan fill="#9aa3b2" font-size="15" font-weight="400"> ×1</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">Linus</text>
+    <rect x="206" y="30" width="110" height="26" rx="13" fill="#4ade80"/>
+    <text x="261" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">DELIVERED</text>
+    <!-- progress: 4 of 4 -->
+    <rect x="24"  y="128" width="69" height="8" rx="4" fill="#4ade80"/>
+    <rect x="101" y="128" width="69" height="8" rx="4" fill="#4ade80"/>
+    <rect x="178" y="128" width="69" height="8" rx="4" fill="#4ade80"/>
+    <rect x="255" y="128" width="61" height="8" rx="4" fill="#4ade80"/>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">c0ffee42 · 10:41:30</text>
+  </g>
+
+  <!-- flow strip -->
+  <text x="60" y="520" fill="#6b7280" font-size="15" font-family="monospace">placeOrder ──► [orders] ──► processor ──► [order-events] ──► subscription ──► browser</text>
+
+  <!-- tag chips -->
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="60"  y="548" width="78"  height="30" rx="15" fill="#1e222b"/><text x="99"  y="568" text-anchor="middle">Python</text>
+    <rect x="150" y="548" width="66"  height="30" rx="15" fill="#1e222b"/><text x="183" y="568" text-anchor="middle">Kafka</text>
+    <rect x="228" y="548" width="82"  height="30" rx="15" fill="#1e222b"/><text x="269" y="568" text-anchor="middle">GraphQL</text>
+    <rect x="322" y="548" width="92"  height="30" rx="15" fill="#1e222b"/><text x="368" y="568" text-anchor="middle">Confluent</text>
+    <rect x="426" y="548" width="60"  height="30" rx="15" fill="#1e222b"/><text x="456" y="568" text-anchor="middle">Avro</text>
+  </g>
+</svg>
