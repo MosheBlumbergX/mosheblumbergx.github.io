@@ -80,4 +80,4 @@ Your site will be available at: `https://mosheblumbergx.github.io`
 
 ## 📄 License
 
-MIT License - feel free to use this as a template for your own portfolio!
+MIT License - feel free to use this as a template for your own portfolio! :)
