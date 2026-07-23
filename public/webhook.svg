@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <!-- header -->
+  <text x="60" y="96" fill="#e7e9ee" font-size="52" font-weight="700">The Friendly <tspan fill="#6ea8fe">Webhook</tspan></text>
+  <text x="62" y="140" fill="#9aa3b2" font-size="24">A URL that lets a service call you the instant something happens</text>
+  <circle cx="68" cy="182" r="6" fill="#4ade80"/>
+  <text x="84" y="188" fill="#4ade80" font-size="16" font-weight="600">listening on :5001</text>
+  <text x="232" y="188" fill="#9aa3b2" font-size="16">· push, not poll — the news comes to you</text>
+
+  <!-- ============ CARD 1 — payment ============ -->
+  <g transform="translate(60,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">payment<tspan fill="#9aa3b2" font-size="15" font-weight="400"> · $100</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">from Stripe</text>
+    <rect x="228" y="30" width="88" height="26" rx="13" fill="#4ade80"/>
+    <text x="272" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">200 OK</text>
+    <text x="24" y="128" fill="#6ea8fe" font-size="13" font-family="monospace">POST /webhook</text>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">a1b2c3d4 · 10:42:07</text>
+  </g>
+
+  <!-- ============ CARD 2 — signup ============ -->
+  <g transform="translate(430,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">signup<tspan fill="#9aa3b2" font-size="15" font-weight="400"> · alice</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">from your app</text>
+    <rect x="228" y="30" width="88" height="26" rx="13" fill="#4ade80"/>
+    <text x="272" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">200 OK</text>
+    <text x="24" y="128" fill="#6ea8fe" font-size="13" font-family="monospace">POST /webhook</text>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">7f3e9a10 · 10:41:55</text>
+  </g>
+
+  <!-- ============ CARD 3 — push ============ -->
+  <g transform="translate(800,240)">
+    <rect width="340" height="210" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="22" font-weight="600">push<tspan fill="#9aa3b2" font-size="15" font-weight="400"> · main</tspan></text>
+    <text x="24" y="80" fill="#9aa3b2" font-size="15">from GitHub</text>
+    <rect x="228" y="30" width="88" height="26" rx="13" fill="#4ade80"/>
+    <text x="272" y="48" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">200 OK</text>
+    <text x="24" y="128" fill="#6ea8fe" font-size="13" font-family="monospace">POST /webhook</text>
+    <text x="24" y="180" fill="#9aa3b2" font-size="13" font-family="monospace">c0ffee42 · 10:41:30</text>
+  </g>
+
+  <!-- flow strip -->
+  <text x="60" y="520" fill="#6b7280" font-size="15" font-family="monospace">event ──POST──► /webhook ──► return 200 ──► (optionally) produce ──► [kafka topic]</text>
+
+  <!-- tag chips -->
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="60"  y="548" width="78"  height="30" rx="15" fill="#1e222b"/><text x="99"  y="568" text-anchor="middle">Python</text>
+    <rect x="150" y="548" width="64"  height="30" rx="15" fill="#1e222b"/><text x="182" y="568" text-anchor="middle">Flask</text>
+    <rect x="226" y="548" width="94"  height="30" rx="15" fill="#1e222b"/><text x="273" y="568" text-anchor="middle">Webhooks</text>
+    <rect x="332" y="548" width="60"  height="30" rx="15" fill="#1e222b"/><text x="362" y="568" text-anchor="middle">HTTP</text>
+    <rect x="404" y="548" width="60"  height="30" rx="15" fill="#1e222b"/><text x="434" y="568" text-anchor="middle">Kafka</text>
+  </g>
+</svg>
