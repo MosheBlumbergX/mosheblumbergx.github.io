@@ -333,6 +333,26 @@ a:hover {
   padding: 0;
 }
 
+.project-content img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.project-content blockquote {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-left: 3px solid var(--accent);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.project-content blockquote p {
+  margin: 0;
+}
+
 /* About page */
 .about-content {
   max-width: 700px;

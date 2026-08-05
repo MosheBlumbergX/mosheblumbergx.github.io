@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <!-- header -->
+  <text x="60" y="96" fill="#e7e9ee" font-size="52" font-weight="700">Debezium <tspan fill="#6ea8fe">CDC</tspan> Throughput</text>
+  <text x="62" y="140" fill="#9aa3b2" font-size="24">SQL Server ’ Kafka  load-testing catch-up, lag, and sustained inserts</text>
+  <circle cx="68" cy="182" r="6" fill="#4ade80"/>
+  <text x="84" y="188" fill="#4ade80" font-size="16" font-weight="600">~20 MB/s payload</text>
+  <text x="230" y="188" fill="#9aa3b2" font-size="16">· CHAR(4000) rows · LSN catch-up · big_data table</text>
+
+  <!-- ============ FLOW: SQL Server ============ -->
+  <g transform="translate(60,240)">
+    <rect width="300" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">SOURCE</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">SQL Server</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">testDB · dbo.big_data</text>
+    <rect x="24" y="150" width="252" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="174" fill="#6ea8fe" font-size="14" font-family="monospace">CDC enabled</text>
+    <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">1M × 4 KB H 4 GB</text>
+    <text x="24" y="250" fill="#9aa3b2" font-size="14">row width &lt; 8060 bytes</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <text x="390" y="390" fill="#6ea8fe" font-size="28" font-weight="700">’</text>
+
+  <!-- ============ FLOW: Debezium ============ -->
+  <g transform="translate(430,240)">
+    <rect width="300" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">CONNECTOR</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">Debezium</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">SQL Server source</text>
+    <rect x="24" y="150" width="252" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="174" fill="#f5b942" font-size="14" font-family="monospace">LSN vs max LSN</text>
+    <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">catch-up check</text>
+    <text x="24" y="250" fill="#9aa3b2" font-size="14">idle ` broken</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <text x="760" y="390" fill="#6ea8fe" font-size="28" font-weight="700">’</text>
+
+  <!-- ============ FLOW: Kafka ============ -->
+  <g transform="translate(800,240)">
+    <rect width="340" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">SINK</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">Kafka topic</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="14" font-family="monospace">&dbo.big_data</text>
+    <rect x="24" y="150" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="174" fill="#4ade80" font-size="14" font-family="monospace">Bytes In ~20 MiB/s</text>
+    <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">envelope &gt; payload</text>
+    <text x="24" y="250" fill="#9aa3b2" font-size="14">JSON Debezium events</text>
+  </g>
+</svg>
