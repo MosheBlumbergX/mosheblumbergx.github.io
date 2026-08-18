@@ -11,18 +11,18 @@
   <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
 
   <!-- header -->
-  <text x="60" y="96" fill="#e7e9ee" font-size="48" font-weight="700">CFK Logs <tspan fill="#6ea8fe">’</tspan> Splunk</text>
-  <text x="62" y="140" fill="#9aa3b2" font-size="24">Confluent for Kubernetes · OpenTelemetry Collector · HEC</text>
+  <text x="60" y="96" fill="#e7e9ee" font-size="48" font-weight="700">CFK Logs <tspan fill="#6ea8fe">&#8594;</tspan> Splunk</text>
+  <text x="62" y="140" fill="#9aa3b2" font-size="24">Confluent for Kubernetes &#183; OpenTelemetry Collector &#183; HEC</text>
   <circle cx="68" cy="182" r="6" fill="#4ade80"/>
   <text x="84" y="188" fill="#4ade80" font-size="16" font-weight="600">JSON to index</text>
-  <text x="220" y="188" fill="#9aa3b2" font-size="16">· DaemonSet tails stdout · namespace annotations route</text>
+  <text x="220" y="188" fill="#9aa3b2" font-size="16">&#183; DaemonSet tails stdout &#183; namespace annotations route</text>
 
-  <!-- ============ FLOW: CFK ============ -->
+  <!-- FLOW: CFK -->
   <g transform="translate(60,240)">
     <rect width="300" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
     <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">SOURCE</text>
     <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">CFK Pods</text>
-    <text x="24" y="118" fill="#9aa3b2" font-size="15">Connect · Kafka · ksqlDB</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">Connect &#183; Kafka &#183; ksqlDB</text>
     <rect x="24" y="150" width="252" height="36" rx="8" fill="#1e222b"/>
     <text x="40" y="174" fill="#6ea8fe" font-size="14" font-family="monospace">Log4j2 JSON stdout</text>
     <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">ns: confluent</text>
@@ -30,9 +30,9 @@
   </g>
 
   <!-- arrow 1 -->
-  <text x="390" y="390" fill="#6ea8fe" font-size="28" font-weight="700">’</text>
+  <text x="390" y="390" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
 
-  <!-- ============ FLOW: OTel ============ -->
+  <!-- FLOW: OTel -->
   <g transform="translate(430,240)">
     <rect width="300" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
     <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">COLLECTOR</text>
@@ -41,13 +41,13 @@
     <rect x="24" y="150" width="252" height="36" rx="8" fill="#1e222b"/>
     <text x="40" y="174" fill="#f5b942" font-size="14" font-family="monospace">tails container logs</text>
     <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">+ k8s metadata</text>
-    <text x="24" y="250" fill="#9aa3b2" font-size="14">pod · ns · cluster name</text>
+    <text x="24" y="250" fill="#9aa3b2" font-size="14">pod &#183; ns &#183; cluster name</text>
   </g>
 
   <!-- arrow 2 -->
-  <text x="760" y="390" fill="#6ea8fe" font-size="28" font-weight="700">’</text>
+  <text x="760" y="390" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
 
-  <!-- ============ FLOW: Splunk ============ -->
+  <!-- FLOW: Splunk -->
   <g transform="translate(800,240)">
     <rect width="340" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
     <text x="24" y="48" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">SINK</text>
@@ -56,6 +56,6 @@
     <rect x="24" y="150" width="292" height="36" rx="8" fill="#1e222b"/>
     <text x="40" y="174" fill="#4ade80" font-size="14" font-family="monospace">index=k8s_logs</text>
     <text x="24" y="220" fill="#e7e9ee" font-size="15" font-family="monospace">_json fields</text>
-    <text x="24" y="250" fill="#9aa3b2" font-size="14">severity · textPayload · &</text>
+    <text x="24" y="250" fill="#9aa3b2" font-size="14">severity &#183; textPayload</text>
   </g>
 </svg>
