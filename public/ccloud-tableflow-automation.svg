@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <!-- header -->
+  <text x="60" y="88" fill="#e7e9ee" font-size="46" font-weight="700">Tableflow <tspan fill="#6ea8fe">Watcher</tspan></text>
+  <text x="62" y="130" fill="#9aa3b2" font-size="22">Enable Iceberg the moment the schema exists</text>
+  <circle cx="68" cy="170" r="6" fill="#4ade80"/>
+  <text x="84" y="176" fill="#4ade80" font-size="16" font-weight="600">schema gate</text>
+  <text x="210" y="176" fill="#9aa3b2" font-size="16">&#183; CFK label selector &#183; stdlib Python &#183; ADLS Gen2</text>
+
+  <!-- CARD 1 OPT-IN -->
+  <g transform="translate(60,214)">
+    <rect width="300" height="268" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">OPT-IN</text>
+    <text x="24" y="80" fill="#e7e9ee" font-size="24" font-weight="600">KafkaTopic CR</text>
+    <text x="24" y="110" fill="#9aa3b2" font-size="15">Confluent for Kubernetes</text>
+    <rect x="24" y="140" width="252" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="164" fill="#6ea8fe" font-size="13" font-family="monospace">enable=true</text>
+    <text x="24" y="208" fill="#e7e9ee" font-size="15" font-family="monospace">payments · clickstream</text>
+    <text x="24" y="238" fill="#9aa3b2" font-size="14">audit-log is unlabelled</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <text x="384" y="360" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <!-- CARD 2 GATE -->
+  <g transform="translate(430,214)">
+    <rect width="300" height="268" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">GATE</text>
+    <text x="24" y="80" fill="#e7e9ee" font-size="24" font-weight="600">Watcher</text>
+    <text x="24" y="110" fill="#9aa3b2" font-size="15">poll Schema Registry 30s</text>
+    <rect x="24" y="140" width="252" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="164" fill="#f5b942" font-size="13" font-family="monospace">&lt;topic&gt;-value</text>
+    <text x="24" y="208" fill="#e7e9ee" font-size="15" font-family="monospace">PendingSchema ’ Enabled</text>
+    <text x="24" y="238" fill="#9aa3b2" font-size="14">ConfigMap, no image build</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <text x="754" y="360" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <!-- CARD 3 ENABLE -->
+  <g transform="translate(800,214)">
+    <rect width="340" height="268" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">ENABLE</text>
+    <text x="24" y="80" fill="#e7e9ee" font-size="24" font-weight="600">Iceberg on ADLS</text>
+    <text x="24" y="110" fill="#9aa3b2" font-size="15">Bring Your Own Storage</text>
+    <rect x="24" y="140" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="164" fill="#4ade80" font-size="14" font-family="monospace">POST /tableflow/v1/...</text>
+    <text x="24" y="208" fill="#e7e9ee" font-size="15" font-family="monospace">status=Enabled annotation</text>
+    <text x="24" y="238" fill="#9aa3b2" font-size="14">one-way: label off ` disable</text>
+  </g>
+
+  <!-- tag chips -->
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="60"  y="548" width="108" height="30" rx="15" fill="#1e222b"/><text x="114" y="568" text-anchor="middle">Kubernetes</text>
+    <rect x="180" y="548" width="88"  height="30" rx="15" fill="#1e222b"/><text x="224" y="568" text-anchor="middle">Tableflow</text>
+    <rect x="280" y="548" width="72"  height="30" rx="15" fill="#1e222b"/><text x="316" y="568" text-anchor="middle">Python</text>
+    <rect x="364" y="548" width="92"  height="30" rx="15" fill="#1e222b"/><text x="410" y="568" text-anchor="middle">Terraform</text>
+    <rect x="468" y="548" width="92"  height="30" rx="15" fill="#1e222b"/><text x="514" y="568" text-anchor="middle">Confluent</text>
+    <rect x="572" y="548" width="66"  height="30" rx="15" fill="#1e222b"/><text x="605" y="568" text-anchor="middle">Azure</text>
+  </g>
+</svg>
