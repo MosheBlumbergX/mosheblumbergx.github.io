@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg-spooldir" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg-spooldir)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="60" y="88" fill="#e7e9ee" font-size="48" font-weight="700">Spooldir <tspan fill="#6ea8fe">CSV</tspan></text>
+  <text x="62" y="128" fill="#9aa3b2" font-size="22">Drop a file in data/input. Read JSON on employee-data.</text>
+  <circle cx="68" cy="168" r="6" fill="#4ade80"/>
+  <text x="84" y="174" fill="#4ade80" font-size="16" font-weight="600">Kafka 7.7.1 KRaft</text>
+  <text x="268" y="174" fill="#9aa3b2" font-size="16">&#183; Connect Spooldir &#183; Kafka UI :8080</text>
+
+  <g transform="translate(48,210)">
+    <rect width="300" height="250" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">DROP</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">data/input</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">CSV on the worker disk</text>
+    <rect x="24" y="146" width="252" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#6ea8fe" font-size="15" font-family="monospace">*.csv</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="monospace">sample_data.csv</text>
+  </g>
+
+  <text x="362" y="348" fill="#6ea8fe" font-size="32" font-weight="700">&#8594;</text>
+
+  <g transform="translate(410,210)">
+    <rect width="340" height="250" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">CONNECT</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">Spooldir source</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">one task, header row</text>
+    <rect x="24" y="146" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#6ea8fe" font-size="14" font-family="monospace">SpoolDirCsvSource</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="monospace">row &#8594; JSON</text>
+  </g>
+
+  <text x="764" y="348" fill="#6ea8fe" font-size="32" font-weight="700">&#8594;</text>
+
+  <g transform="translate(812,210)">
+    <rect width="340" height="250" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">TOPIC</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">employee-data</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">Kafka UI on :8080</text>
+    <rect x="24" y="146" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#4ade80" font-size="14" font-family="monospace">{"Name":"Alice Smith"}</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="monospace">schemas off</text>
+  </g>
+
+  <text x="48" y="508" fill="#9aa3b2" font-size="16" font-family="monospace">ok &#8594; data/finished/     error &#8594; data/error/</text>
+
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="48" y="540" width="72" height="30" rx="15" fill="#1e222b"/><text x="84" y="560" text-anchor="middle">Kafka</text>
+    <rect x="132" y="540" width="130" height="30" rx="15" fill="#1e222b"/><text x="197" y="560" text-anchor="middle">Kafka Connect</text>
+    <rect x="274" y="540" width="78" height="30" rx="15" fill="#1e222b"/><text x="313" y="560" text-anchor="middle">Docker</text>
+    <rect x="364" y="540" width="96" height="30" rx="15" fill="#1e222b"/><text x="412" y="560" text-anchor="middle">Spooldir</text>
+    <rect x="472" y="540" width="70" height="30" rx="15" fill="#1e222b"/><text x="507" y="560" text-anchor="middle">KRaft</text>
+  </g>
+</svg>
