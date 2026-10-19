@@ -2,6 +2,7 @@
 title: 'ISS Live: Kafka and Flink on a Globe'
 description: 'A Terraform demo on AWS that streams ISS fixes and altitude-matched satellites through Confluent Cloud and Flink SQL onto a 3D globe.'
 pubDate: 2026-10-19
+updatedDate: 2026-10-19
 tags: ['Kafka', 'Flink', 'Confluent', 'Python', 'Terraform', 'AWS']
 status: 'completed'
 repo: 'https://github.com/MosheBlumbergX/issDemo'
@@ -25,6 +26,8 @@ of them, mostly Starlink. Sixteen Flink SQL statements turn the two streams
 into speed, heading, city flyovers, measured orbit periods, and close
 approaches. A dashboard on the same host pushes the results to a 3D globe with
 server-sent events.
+
+![The dashboard: a 3D globe with the ISS over the southern Indian Ocean inside a shell of faint satellite dots, its orbit trail and predicted path. Live telemetry is on the left; on the right, the nearest satellite right now, the next predicted close approaches and a flight log of Flink-detected events](/iss-demo-dashboard.jpg)
 
 ## How it works
 
