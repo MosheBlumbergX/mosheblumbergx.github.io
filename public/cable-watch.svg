@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="60" y="92" fill="#e7e9ee" font-size="52" font-weight="700">Cable <tspan fill="#6ea8fe">Watch</tspan></text>
+  <text x="62" y="136" fill="#9aa3b2" font-size="24">Flink SQL watches every Baltic ship over subsea cables</text>
+  <circle cx="68" cy="176" r="6" fill="#4ade80"/>
+  <text x="84" y="182" fill="#4ade80" font-size="16" font-weight="600">live AIS</text>
+  <text x="166" y="182" fill="#9aa3b2" font-size="16">&#183; ~3,000 vessels &#183; 47 cables and pipelines &#183; alert to your phone</text>
+
+  <g transform="translate(48,220)">
+    <rect width="310" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="46" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">INGEST</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">Ships and cables</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">aisstream.io &#183; ~12 reports/s</text>
+    <rect x="24" y="146" width="262" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#f5b942" font-size="14" font-family="ui-monospace, monospace">ais_position_raw &#183; H3 cell</text>
+    <rect x="24" y="194" width="262" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="218" fill="#e879f9" font-size="14" font-family="ui-monospace, monospace">cable_cells &#183; 27,131 cells</text>
+    <text x="24" y="258" fill="#9aa3b2" font-size="14">data contract &#8594; DLQ &#183; OpenStreetMap</text>
+  </g>
+
+  <text x="372" y="372" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(414,220)">
+    <rect width="340" height="280" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="46" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">FLINK SQL</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">Detect and score</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">Confluent Cloud</text>
+    <rect x="24" y="146" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#6ea8fe" font-size="14" font-family="ui-monospace, monospace">loiter &#183; anchor drag &#183; dark</text>
+    <rect x="24" y="194" width="292" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="218" fill="#f5b942" font-size="14" font-family="ui-monospace, monospace">risk 30 WATCH &#183; 60 ALERT</text>
+    <text x="24" y="258" fill="#9aa3b2" font-size="14">watch list &#183; decay &#183; ML_PREDICT brief</text>
+  </g>
+
+  <text x="768" y="372" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(810,220)">
+    <rect width="342" height="280" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="46" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">ACT</text>
+    <text x="24" y="88" fill="#e7e9ee" font-size="26" font-weight="600">Incident alert</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">HTTP Sink V2 &#183; no consumer code</text>
+    <rect x="24" y="146" width="294" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#4ade80" font-size="14" font-family="ui-monospace, monospace">ntfy &#183; PagerDuty &#183; Slack</text>
+    <rect x="24" y="194" width="294" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="218" fill="#6ea8fe" font-size="14" font-family="ui-monospace, monospace">MapLibre dashboard &#183; SSE</text>
+    <text x="24" y="258" fill="#9aa3b2" font-size="14">incident log &#183; vessel panel &#183; Tableflow</text>
+  </g>
+
+  <text x="48" y="556" fill="#6b7280" font-size="16" font-family="ui-monospace, monospace">aisstream.io &#183; Kafka &#183; Flink SQL &#183; HTTP Sink &#183; your phone</text>
+</svg>
