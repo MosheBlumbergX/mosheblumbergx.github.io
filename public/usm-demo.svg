@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="60" y="88" fill="#e7e9ee" font-size="42" font-weight="700">USM Demo: CP in the <tspan fill="#6ea8fe">Cloud UI</tspan></text>
+  <text x="62" y="128" fill="#9aa3b2" font-size="22">EKS calls Confluent Cloud over PrivateLink</text>
+  <circle cx="68" cy="168" r="6" fill="#4ade80"/>
+  <text x="84" y="174" fill="#4ade80" font-size="16" font-weight="600">PrivateLink only</text>
+  <text x="240" y="174" fill="#9aa3b2" font-size="16">&#183; CFK 3.3 &#183; CP 8.3 &#183; source-initiated link &#183; same schema ID</text>
+
+  <g transform="translate(48,214)">
+    <rect width="320" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">EKS</text>
+    <text x="24" y="84" fill="#e7e9ee" font-size="26" font-weight="600">Confluent Platform</text>
+    <text x="24" y="116" fill="#9aa3b2" font-size="15">KRaft &#183; Kafka &#183; Connect &#183; SR</text>
+    <rect x="24" y="146" width="272" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#6ea8fe" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">test1 &#183; test2 (Avro)</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">ks-validate &#183; S3 sink</text>
+    <text x="24" y="248" fill="#9aa3b2" font-size="14">namespace usm &#183; CP 8.3.0</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="14">Pod Identity, no AWS keys</text>
+  </g>
+
+  <text x="384" y="372" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(424,214)">
+    <rect width="320" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">DIAL OUT</text>
+    <text x="24" y="84" fill="#e7e9ee" font-size="26" font-weight="600">PrivateLink</text>
+    <text x="24" y="116" fill="#9aa3b2" font-size="15">VPC endpoint &#183; access point</text>
+    <rect x="24" y="146" width="272" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#f5b942" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">USM Agent 1.2.1</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">cluster link: source</text>
+    <text x="24" y="248" fill="#9aa3b2" font-size="14">schema exporter &#183; NONE</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="14">Route53 private zone</text>
+  </g>
+
+  <text x="760" y="372" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(800,214)">
+    <rect width="352" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">CONFLUENT CLOUD</text>
+    <text x="24" y="84" fill="#e7e9ee" font-size="26" font-weight="600">One environment</text>
+    <text x="24" y="116" fill="#9aa3b2" font-size="15">USM view + Enterprise cluster</text>
+    <rect x="24" y="146" width="304" height="36" rx="8" fill="#1e222b"/>
+    <text x="40" y="170" fill="#4ade80" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">brokers &#183; Connect &#183; Streams</text>
+    <text x="24" y="214" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">mirrors: test1 &#183; test2</text>
+    <text x="24" y="248" fill="#9aa3b2" font-size="14">orders from managed Datagen</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="14">test2-value, same schema ID</text>
+  </g>
+</svg>
