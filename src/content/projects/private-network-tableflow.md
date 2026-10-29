@@ -3,7 +3,7 @@ title: 'Private Network Tableflow: Iceberg SQL Without a Catalog'
 description: 'Private-link Confluent Tableflow on Azure writes Iceberg into a locked-down ADLS account, and a 60-second sync job points Snowflake at the newest metadata file.'
 pubDate: 2026-10-29
 tags: ['Terraform', 'Confluent', 'Snowflake', 'Iceberg', 'Azure', 'Private Link']
-status: 'in-progress'
+status: 'completed'
 repo: 'https://github.com/MosheBlumbergX/PrivateNetworkSnowflakeConfluentTableFlowIceberg'
 image: '/private-network-tableflow.svg'
 ---
