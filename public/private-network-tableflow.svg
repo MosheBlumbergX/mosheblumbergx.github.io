@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="48" y="72" fill="#e7e9ee" font-size="42" font-weight="700">Private Link <tspan fill="#6ea8fe">Tableflow</tspan></text>
+  <text x="50" y="112" fill="#9aa3b2" font-size="20">Iceberg metadata in ADLS. Snowflake refreshes from the file.</text>
+  <circle cx="58" cy="150" r="6" fill="#4ade80"/>
+  <text x="74" y="156" fill="#4ade80" font-size="16" font-weight="600">no public data path</text>
+  <text x="258" y="156" fill="#9aa3b2" font-size="16">&#183; Enterprise cluster &#183; uksouth &#183; sync every 60s</text>
+
+  <!-- CARD 1 VM -->
+  <g transform="translate(40,188)">
+    <rect width="250" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="20" y="40" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">PRODUCE + SYNC</text>
+    <text x="20" y="78" fill="#e7e9ee" font-size="24" font-weight="600">Demo VM</text>
+    <text x="20" y="110" fill="#9aa3b2" font-size="15">customer VNet</text>
+    <rect x="20" y="132" width="210" height="36" rx="8" fill="#1e222b"/>
+    <text x="32" y="156" fill="#6ea8fe" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">producer.py &#183; Avro</text>
+    <text x="20" y="198" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">topic stock_trades</text>
+    <text x="20" y="230" fill="#9aa3b2" font-size="14">Private Link Attachment</text>
+    <text x="20" y="262" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">sync.py &#183; 60s</text>
+  </g>
+
+  <text x="298" y="348" fill="#6ea8fe" font-size="26" font-weight="700">&#8594;</text>
+
+  <!-- CARD 2 KAFKA -->
+  <g transform="translate(332,188)">
+    <rect width="250" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="20" y="40" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">MATERIALIZE</text>
+    <text x="20" y="78" fill="#e7e9ee" font-size="24" font-weight="600">Tableflow</text>
+    <text x="20" y="110" fill="#9aa3b2" font-size="15">Enterprise Kafka</text>
+    <rect x="20" y="132" width="210" height="36" rx="8" fill="#1e222b"/>
+    <text x="32" y="156" fill="#f5b942" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Iceberg &#183; no IRC</text>
+    <text x="20" y="198" fill="#e7e9ee" font-size="15">egress Private Link</text>
+    <text x="20" y="230" fill="#9aa3b2" font-size="14">access points blob + dfs</text>
+    <text x="20" y="262" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">RUNNING topics</text>
+  </g>
+
+  <text x="590" y="348" fill="#6ea8fe" font-size="26" font-weight="700">&#8594;</text>
+
+  <!-- CARD 3 ADLS -->
+  <g transform="translate(624,188)">
+    <rect width="250" height="300" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="20" y="40" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">STORE</text>
+    <text x="20" y="78" fill="#e7e9ee" font-size="24" font-weight="600">ADLS Gen2</text>
+    <text x="20" y="110" fill="#9aa3b2" font-size="15">firewall default Deny</text>
+    <rect x="20" y="132" width="210" height="52" rx="8" fill="#1e222b"/>
+    <text x="32" y="154" fill="#4ade80" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">metadata/</text>
+    <text x="32" y="172" fill="#4ade80" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">*.metadata.json</text>
+    <text x="20" y="214" fill="#e7e9ee" font-size="15">HNS &#183; selected networks</text>
+    <text x="20" y="246" fill="#9aa3b2" font-size="14">Snowflake subnets allowed</text>
+    <text x="20" y="274" fill="#9aa3b2" font-size="14">VM blob private endpoint</text>
+  </g>
+
+  <text x="882" y="348" fill="#6ea8fe" font-size="26" font-weight="700">&#8594;</text>
+
+  <!-- CARD 4 SNOWFLAKE -->
+  <g transform="translate(916,188)">
+    <rect width="244" height="300" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="18" y="40" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">QUERY</text>
+    <text x="18" y="78" fill="#e7e9ee" font-size="24" font-weight="600">Snowflake</text>
+    <text x="18" y="110" fill="#9aa3b2" font-size="15">object-store catalog</text>
+    <rect x="18" y="132" width="208" height="52" rx="8" fill="#1e222b"/>
+    <text x="30" y="154" fill="#4ade80" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">ALTER ICEBERG TABLE</text>
+    <text x="30" y="172" fill="#4ade80" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">REFRESH metadata</text>
+    <text x="18" y="214" fill="#e7e9ee" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">STOCK_TRADES</text>
+    <text x="18" y="246" fill="#9aa3b2" font-size="14">service endpoints</text>
+    <text x="18" y="274" fill="#9aa3b2" font-size="14">read-only Iceberg</text>
+  </g>
+
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="40" y="548" width="100" height="30" rx="15" fill="#1e222b"/><text x="90" y="568" text-anchor="middle">Terraform</text>
+    <rect x="152" y="548" width="100" height="30" rx="15" fill="#1e222b"/><text x="202" y="568" text-anchor="middle">Confluent</text>
+    <rect x="264" y="548" width="100" height="30" rx="15" fill="#1e222b"/><text x="314" y="568" text-anchor="middle">Snowflake</text>
+    <rect x="376" y="548" width="84" height="30" rx="15" fill="#1e222b"/><text x="418" y="568" text-anchor="middle">Iceberg</text>
+    <rect x="472" y="548" width="72" height="30" rx="15" fill="#1e222b"/><text x="508" y="568" text-anchor="middle">Azure</text>
+    <rect x="556" y="548" width="118" height="30" rx="15" fill="#1e222b"/><text x="615" y="568" text-anchor="middle">Private Link</text>
+  </g>
+</svg>
