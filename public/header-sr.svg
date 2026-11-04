@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="48" y="78" fill="#e7e9ee" font-size="44" font-weight="700">Schema <tspan fill="#6ea8fe">GUID</tspan> on the Record</text>
+  <text x="50" y="118" fill="#9aa3b2" font-size="22">Kafka header 0x01 + 16 bytes, bare Avro in the payload</text>
+  <circle cx="58" cy="158" r="6" fill="#4ade80"/>
+  <text x="74" y="164" fill="#4ade80" font-size="16" font-weight="600">local Docker</text>
+  <text x="188" y="164" fill="#9aa3b2" font-size="16">CP 8.4.0 &#183; KRaft &#183; localhost:9092 &#183; Schema Registry :8081</text>
+
+  <!-- producer -->
+  <g transform="translate(48,210)">
+    <rect width="330" height="350" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">PRODUCER</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">Python client</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">AvroSerializer</text>
+    <rect x="24" y="146" width="282" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="172" fill="#6ea8fe" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">header_schema_id_serializer</text>
+    <text x="24" y="224" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">confluent-kafka 2.16.1</text>
+    <text x="24" y="256" fill="#9aa3b2" font-size="15">opts in per serializer</text>
+    <text x="24" y="300" fill="#9aa3b2" font-size="14">classic default still writes</text>
+    <text x="24" y="322" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">0x00 + 4-byte schema id</text>
+  </g>
+
+  <text x="392" y="400" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <!-- record -->
+  <g transform="translate(434,210)">
+    <rect width="332" height="350" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">KAFKA RECORD</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="24" font-weight="600">__value_schema_id</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">magic 0x01 + 16-byte GUID</text>
+    <rect x="24" y="146" width="284" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="172" fill="#4ade80" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">payload: bare Avro datum</text>
+    <text x="24" y="224" fill="#e7e9ee" font-size="15">same GUID, every registry</text>
+    <text x="24" y="256" fill="#9aa3b2" font-size="15">fingerprint of the schema</text>
+    <text x="24" y="300" fill="#9aa3b2" font-size="14">keys use __key_schema_id</text>
+    <text x="24" y="322" fill="#9aa3b2" font-size="14">about +32 bytes per record</text>
+  </g>
+
+  <text x="780" y="400" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <!-- consumer -->
+  <g transform="translate(822,210)">
+    <rect width="330" height="350" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="44" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">CONSUMER</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">Dual deserializer</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="15">header first, then prefix</text>
+    <rect x="24" y="146" width="282" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="172" fill="#6ea8fe" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /schemas/guids/{guid}</text>
+    <text x="24" y="224" fill="#e7e9ee" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">dual_schema_id_deserializer</text>
+    <text x="24" y="256" fill="#9aa3b2" font-size="15">Python default</text>
+    <text x="24" y="300" fill="#9aa3b2" font-size="14">still reads 0x00 + schema id</text>
+    <text x="24" y="322" fill="#9aa3b2" font-size="14">prefix-only consumers fail</text>
+  </g>
+</svg>
