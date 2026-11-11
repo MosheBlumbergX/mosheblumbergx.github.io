@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="48" y="74" fill="#e7e9ee" font-size="42" font-weight="700">Client-Side <tspan fill="#6ea8fe">Encryption</tspan></text>
+  <text x="50" y="114" fill="#9aa3b2" font-size="22">PII fields with AWS KMS. The whole payload with Azure Key Vault.</text>
+  <circle cx="58" cy="154" r="6" fill="#4ade80"/>
+  <text x="74" y="160" fill="#4ade80" font-size="16" font-weight="600">KEK stays in your cloud</text>
+  <text x="292" y="160" fill="#9aa3b2" font-size="16">&#183; shared = false &#183; DEK is AES-256-GCM &#183; brokers store ciphertext</text>
+
+  <g transform="translate(40,196)">
+    <rect width="340" height="292" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">PYTHON CLIENT</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">Avro + rules</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">confluent-kafka 2.16.1</text>
+    <rect x="24" y="142" width="292" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="168" fill="#6ea8fe" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">ENCRYPT &#183; ENCRYPT_PAYLOAD</text>
+    <text x="24" y="216" fill="#e7e9ee" font-size="16">rule_conf holds KMS creds</text>
+    <text x="24" y="246" fill="#9aa3b2" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">role.arn &#183; client.secret</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="15">use.latest.version = true</text>
+  </g>
+
+  <text x="392" y="348" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(430,196)">
+    <rect width="340" height="292" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">YOUR KMS</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">KEK stays here</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">wrap and unwrap the DEK</text>
+    <rect x="24" y="142" width="292" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="168" fill="#4ade80" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">shared = false</text>
+    <text x="24" y="216" fill="#e7e9ee" font-size="16">AWS KMS &#183; rotation on</text>
+    <text x="24" y="246" fill="#9aa3b2" font-size="16">Azure Key Vault &#183; RSA-3072</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="15">Crypto User on that key only</text>
+  </g>
+
+  <text x="782" y="348" fill="#6ea8fe" font-size="28" font-weight="700">&#8594;</text>
+
+  <g transform="translate(820,196)">
+    <rect width="340" height="292" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="42" fill="#9aa3b2" font-size="13" font-weight="600" letter-spacing="0.8">CONFLUENT CLOUD</text>
+    <text x="24" y="86" fill="#e7e9ee" font-size="26" font-weight="600">Ciphertext only</text>
+    <text x="24" y="118" fill="#9aa3b2" font-size="16">wrapped DEK in DEK Registry</text>
+    <rect x="24" y="142" width="292" height="40" rx="8" fill="#1e222b"/>
+    <text x="36" y="168" fill="#f5b942" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">&lt;prefix&gt;-customers</text>
+    <text x="24" y="216" fill="#e7e9ee" font-size="16">CSFLE &#183; PII fields locked</text>
+    <text x="24" y="246" fill="#9aa3b2" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">&lt;prefix&gt;-payments</text>
+    <text x="24" y="276" fill="#9aa3b2" font-size="15">CSPE &#183; whole payload locked</text>
+  </g>
+
+  <text x="48" y="548" fill="#9aa3b2" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">client &#8594; wrap DEK at your KMS &#8594; DEK Registry &#8594; Kafka ciphertext</text>
+  <text x="48" y="586" fill="#9aa3b2" font-size="16">intruder has the API key &#183; CSFLE shows ciphertext PII &#183; CSPE payload is unreadable</text>
+</svg>
