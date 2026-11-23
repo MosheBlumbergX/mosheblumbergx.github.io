@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6ea8fe"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="60" y="96" fill="#e7e9ee" font-size="52" font-weight="700">Build Your Own <tspan fill="#6ea8fe">Iceberg Catalogue</tspan></text>
+  <text x="62" y="140" fill="#9aa3b2" font-size="24">A table name in, a metadata file location out</text>
+  <circle cx="68" cy="182" r="6" fill="#4ade80"/>
+  <text x="84" y="188" fill="#4ade80" font-size="16" font-weight="600">listening on :8181</text>
+  <text x="248" y="188" fill="#9aa3b2" font-size="16">· one file, no database, read-only</text>
+
+  <!-- reader -->
+  <g transform="translate(60,250)">
+    <rect width="300" height="190" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="26" font-weight="600">reader.py</text>
+    <text x="24" y="84" fill="#9aa3b2" font-size="18">PyIceberg client</text>
+    <text x="24" y="130" fill="#6ea8fe" font-size="16" font-family="monospace">load_table("demo.trades")</text>
+    <text x="24" y="160" fill="#4ade80" font-size="16" font-family="monospace">1,500 rows · 2 snapshots</text>
+  </g>
+
+  <!-- catalog -->
+  <g transform="translate(450,250)">
+    <rect width="300" height="190" rx="14" fill="#171a21" stroke="#6ea8fe"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="26" font-weight="600">catalog.py</text>
+    <text x="24" y="84" fill="#9aa3b2" font-size="18">FastAPI · OAuth2 · REST</text>
+    <text x="24" y="130" fill="#6ea8fe" font-size="16" font-family="monospace">GET /v1/namespaces/…</text>
+    <text x="24" y="160" fill="#9aa3b2" font-size="16" font-family="monospace">highest number wins</text>
+  </g>
+
+  <!-- warehouse -->
+  <g transform="translate(840,250)">
+    <rect width="300" height="190" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="24" y="52" fill="#e7e9ee" font-size="26" font-weight="600">warehouse/</text>
+    <text x="24" y="84" fill="#9aa3b2" font-size="18">written by writer.py</text>
+    <text x="24" y="130" fill="#9aa3b2" font-size="15" font-family="monospace">00001-….metadata.json</text>
+    <text x="24" y="160" fill="#4ade80" font-size="15" font-family="monospace">00002-….metadata.json</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="364" y1="320" x2="446" y2="320" stroke="#6ea8fe" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="754" y1="320" x2="836" y2="320" stroke="#6ea8fe" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="405" y="306" fill="#9aa3b2" font-size="14" text-anchor="middle" font-family="monospace">GET</text>
+  <text x="795" y="306" fill="#9aa3b2" font-size="14" text-anchor="middle" font-family="monospace">scan</text>
+
+  <text x="60" y="510" fill="#6b7280" font-size="18" font-family="monospace">{ "metadata-location": "file:///…/00002-….metadata.json" }  ◄── the pointer</text>
+
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="60"  y="548" width="120" height="30" rx="15" fill="#1e222b"/><text x="120" y="568" text-anchor="middle">Apache Iceberg</text>
+    <rect x="192" y="548" width="78"  height="30" rx="15" fill="#1e222b"/><text x="231" y="568" text-anchor="middle">Python</text>
+    <rect x="282" y="548" width="84"  height="30" rx="15" fill="#1e222b"/><text x="324" y="568" text-anchor="middle">FastAPI</text>
+    <rect x="378" y="548" width="96"  height="30" rx="15" fill="#1e222b"/><text x="426" y="568" text-anchor="middle">PyIceberg</text>
+  </g>
+</svg>
