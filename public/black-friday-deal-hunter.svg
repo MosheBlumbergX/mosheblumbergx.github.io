@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1115"/>
+      <stop offset="1" stop-color="#12151c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" fill="none" stroke="#2a2f3a"/>
+
+  <text x="56" y="78" fill="#e7e9ee" font-size="48" font-weight="700">Black Friday <tspan fill="#6ea8fe">Deal Hunter</tspan></text>
+  <text x="58" y="116" fill="#9aa3b2" font-size="22">A Flink agent checks real UK shop prices and flags the genuine deals</text>
+  <circle cx="66" cy="152" r="6" fill="#4ade80"/>
+  <text x="82" y="158" fill="#4ade80" font-size="16" font-weight="600">3 of 5 best deals</text>
+  <text x="242" y="158" fill="#9aa3b2" font-size="16">· snapshot of 25 Nov 2026, prices in GBP</text>
+
+  <g transform="translate(50,186)">
+    <rect width="208" height="236" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="18" y="38" fill="#e7e9ee" font-size="20" font-weight="600">AirPods Pro</text>
+    <text x="18" y="100" fill="#e7e9ee" font-size="40" font-weight="700">154.80</text>
+    <text x="18" y="126" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">median 183.99</text>
+    <rect x="18" y="154" width="124" height="28" rx="14" fill="#4ade80"/>
+    <text x="80" y="173" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">BEST DEAL</text>
+    <text x="18" y="212" fill="#6b7280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">15.9% below</text>
+  </g>
+
+  <g transform="translate(278,186)">
+    <rect width="208" height="236" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="18" y="38" fill="#e7e9ee" font-size="20" font-weight="600">Switch 2</text>
+    <text x="18" y="100" fill="#e7e9ee" font-size="40" font-weight="700">399.99</text>
+    <text x="18" y="126" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">median 440.99</text>
+    <rect x="18" y="154" width="124" height="28" rx="14" fill="#6ea8fe"/>
+    <text x="80" y="173" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">OK PRICE</text>
+    <text x="18" y="212" fill="#6b7280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">9.3% below</text>
+  </g>
+
+  <g transform="translate(506,186)">
+    <rect width="208" height="236" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="18" y="38" fill="#e7e9ee" font-size="20" font-weight="600">LEGO advent</text>
+    <text x="18" y="100" fill="#e7e9ee" font-size="40" font-weight="700">18.39</text>
+    <text x="18" y="126" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">median 26.13</text>
+    <rect x="18" y="154" width="124" height="28" rx="14" fill="#4ade80"/>
+    <text x="80" y="173" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">BEST DEAL</text>
+    <text x="18" y="212" fill="#6b7280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">29.6% below</text>
+  </g>
+
+  <g transform="translate(734,186)">
+    <rect width="208" height="236" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="18" y="38" fill="#e7e9ee" font-size="20" font-weight="600">Dyson Airwrap</text>
+    <text x="18" y="100" fill="#e7e9ee" font-size="40" font-weight="700">299.99</text>
+    <text x="18" y="126" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">median 355.36</text>
+    <rect x="18" y="154" width="124" height="28" rx="14" fill="#4ade80"/>
+    <text x="80" y="173" fill="#08101f" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">BEST DEAL</text>
+    <text x="18" y="212" fill="#6b7280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">15.6% below</text>
+  </g>
+
+  <g transform="translate(962,186)">
+    <rect width="188" height="236" rx="14" fill="#171a21" stroke="#2a2f3a"/>
+    <text x="18" y="38" fill="#e7e9ee" font-size="20" font-weight="600">Ninja air fryer</text>
+    <text x="18" y="100" fill="#6b7280" font-size="40" font-weight="700">n/a</text>
+    <text x="18" y="126" fill="#9aa3b2" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">under 4 listings</text>
+    <rect x="18" y="154" width="112" height="28" rx="14" fill="#6b7280"/>
+    <text x="74" y="173" fill="#e7e9ee" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.4">NO DATA</text>
+    <text x="18" y="212" fill="#6b7280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">refused to guess</text>
+  </g>
+
+  <text x="50" y="478" fill="#6b7280" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">wanted_products ──► Flink AI_RUN_AGENT ──► MCP on Lambda (search_prices, send_email) ──► deal_verdicts</text>
+  <text x="50" y="506" fill="#6b7280" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">verdict rule: best deal = cheapest at least 10% below the median of 4+ UK shop listings</text>
+
+  <g fill="#9aa3b2" font-size="14">
+    <rect x="50" y="540" width="160" height="30" rx="15" fill="#1e222b"/>
+    <text x="130" y="560" text-anchor="middle">Confluent Cloud</text>
+    <rect x="222" y="540" width="128" height="30" rx="15" fill="#1e222b"/>
+    <text x="286" y="560" text-anchor="middle">Apache Flink</text>
+    <rect x="362" y="540" width="64" height="30" rx="15" fill="#1e222b"/>
+    <text x="394" y="560" text-anchor="middle">MCP</text>
+    <rect x="438" y="540" width="128" height="30" rx="15" fill="#1e222b"/>
+    <text x="502" y="560" text-anchor="middle">AWS Lambda</text>
+    <rect x="578" y="540" width="108" height="30" rx="15" fill="#1e222b"/>
+    <text x="632" y="560" text-anchor="middle">Terraform</text>
+    <rect x="698" y="540" width="84" height="30" rx="15" fill="#1e222b"/>
+    <text x="740" y="560" text-anchor="middle">Python</text>
+  </g>
+</svg>
